@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutsalKicks - Sepatu Futsal Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">Futsal<span>Kicks</span></div>
+        <ul class="nav-menu">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#produk">Produk</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#pembayaran">Pembayaran</a></li>
+        </ul>
+        <div class="cart">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <p class="subtitle">SEPATU FUTSAL TERBAIK</p>
+        <h1>Sepatu berkualitas.<br><span>Main Lebih Hebat.</span></h1>
+        <p class="hero-description">
+            Temukan berbagai pilihan sepatu futsal
+            berkualitas dengan desain modern,
+            nyaman digunakan, dan cocok untuk
+            latihan maupun pertandingan.
+        </p>
+        <a href="#produk" class="hero-button">Belanja Sekarang</a>
+    </div>
+    <div class="hero-shoe">
+        <div class="hero-circle"></div>
+        <img src="images__2_-removebg-preview.png" alt="Sepatu Futsal">
+    </div>
+</section>
+
+<section id="produk" class="produk">
+    <div class="section-header">
+        <p>KOLEKSI TERBAIK</p>
+        <h2>Produk Sepatu Futsal</h2>
+        <span>Pilih sepatu favoritmu dan tambahkan ke keranjang.</span>
+    </div>
+
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="foto1.jpg" alt="Adidas Speed Maniac">
+            </div>
+            <div class="product-info">
+                <h3>Adidas Speed Maniac</h3>
+                <p>Sepatu futsal ringan dengan desain sporty dan nyaman.</p>
+                <div class="product-bottom">
+                    <h4>Rp450.000</h4>
+                    <button type="button" onclick="addToCart('Adidas Speed Maniac', 450000)">+ Keranjang</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="foto2.jpg" alt="OrtuSeight legion V5">
+            </div>
+            <div class="product-info">
+                <h3>OrtuSeight legion V5</h3>
+                <p>Sepatu dengan desain modern untuk permainan cepat.</p>
+                <div class="product-bottom">
+                    <h4>Rp500.000</h4>
+                    <button type="button" onclick="addToCart('OrtuSeight legion V5', 500000)">+ Keranjang</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="foto3.webp" alt="OrtuSeight legion V5 Silver Pink">
+            </div>
+            <div class="product-info">
+                <h3>OrtuSeight legion V5</h3>
+                <p>Kombinasi warna silver dan pink dengan tampilan stylish.</p>
+                <div class="product-bottom">
+                    <h4>Rp575.000</h4>
+                    <button type="button" onclick="addToCart('OrtuSeight legion V5 Silver Pink', 575000)">+ Keranjang</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="foto4.webp" alt="LightSpeed Maniac">
+            </div>
+            <div class="product-info">
+                <h3>LightSpeed Maniac</h3>
+                <p>Desain agresif untuk pemain yang mengutamakan kecepatan.</p>
+                <div class="product-bottom">
+                    <h4>Rp650.000</h4>
+                    <button type="button" onclick="addToCart('LightSpeed Maniac', 650000)">+ Keranjang</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="foto5.jpg" alt="LightSpeed Reborn">
+            </div>
+            <div class="product-info">
+                <h3>LightSpeed Reborn</h3>
+                <p>Sepatu futsal stylish dengan kenyamanan untuk bermain.</p>
+                <div class="product-bottom">
+                    <h4>Rp700.000</h4>
+                    <button type="button" onclick="addToCart('LightSpeed Reborn', 700000)">+ Keranjang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tentang" class="about">
+    <div class="about-content">
+        <p class="subtitle">TENTANG FUTSALKICKS</p>
+        <h2>Sepatu Futsal Untuk Permainan Terbaikmu</h2>
+        <p>
+            FutsalKicks adalah toko online yang menyediakan berbagai
+            pilihan sepatu futsal dengan desain menarik dan nyaman digunakan.
+        </p>
+        <p>
+            Kami menyediakan pilihan sepatu untuk latihan, bermain bersama
+            teman, maupun pertandingan futsal.
+        </p>
+    </div>
+</section>
+
+<section id="pembayaran" class="payment">
+    <div class="section-header">
+        <p>CHECKOUT</p>
+        <h2>Pembayaran</h2>
+        <span>Periksa pesanan sebelum melakukan pembayaran.</span>
+    </div>
+
+    <div class="payment-container">
+        <div class="order">
+            <h3>Pesanan Kamu</h3>
+            <div id="cart-items">
+                <p class="empty">Belum ada produk di keranjang.</p>
+            </div>
+            <div class="total">
+                <span>Total</span>
+                <strong id="total-price">Rp0</strong>
+            </div>
+        </div>
+
+        <div class="payment-form">
+            <h3>Data Pembeli</h3>
+
+            <form id="payment-form">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Masukkan nama lengkap" autocomplete="name" required>
+
+                <label for="telepon">Nomor WhatsApp</label>
+                <input type="tel" id="telepon" placeholder="08xxxxxxxxxx" autocomplete="tel" inputmode="tel" required>
+
+                <label for="alamat">Alamat Pengiriman</label>
+                <textarea id="alamat" placeholder="Masukkan alamat lengkap" autocomplete="street-address" required></textarea>
+
+                <label for="metode">Metode Pembayaran</label>
+                <select id="metode" required>
+                    <option value="">Pilih metode pembayaran</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                    <option value="DANA">DANA</option>
+                    <option value="OVO">OVO</option>
+                    <option value="GoPay">GoPay</option>
+                    <option value="COD">COD</option>
+                </select>
+
+                <!-- QR pembayaran: gambar resmi bisa ditambahkan nanti -->
+                <div id="qr-payment" class="qr-payment" hidden>
+                    <h4 id="qr-title">QR Pembayaran</h4>
+                    <img id="qr-image" src="fotoqr.jpeg" alt="QR pembayaran">
+                    <p id="qr-placeholder" class="qr-placeholder">
+                        QR resmi belum ditambahkan oleh penjual.
+                    </p>
+                    <p id="qr-note" class="qr-note"></p>
+                </div>
+
+                <button type="submit" class="payment-button">
+                    Bayar Sekarang
+                </button>
+
+                <a href="https://wa.me/62895351243355"
+                   class="btn-whatsapp"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Hubungi via WhatsApp
+                </a>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div id="success-modal" class="modal">
+    <div class="modal-content">
+        <div class="success">✓</div>
+        <h2 id="modal-title">Pesanan Disiapkan</h2>
+        <p id="modal-message">
+            Lanjutkan percakapan WhatsApp untuk mengonfirmasi pesanan.
+        </p>
+        <div id="invoice"></div>
+        <button type="button" onclick="closeModal()">Selesai</button>
+    </div>
+</div>
+
+<footer>
+    <h2>Futsal<span>Kicks</span></h2>
+    <p>Sepatu futsal pilihan untuk permainan terbaikmu.</p>
+    <small>© 2026 FutsalKicks</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
